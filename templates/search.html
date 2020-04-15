@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block css %}
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			}
+		.locaData {
+			color:black;
+			text-align:center;
+			font-size:20px;
+			display:block;
+			width:90%;
+			margin:10px auto;
+			padding:5px;
+			}
+		.title {
+			font-weight:bold;
+			font-size:32px;
+			}
+		#num1 {
+			color:red;
+			font-weight:bold;
+			}
+		#num2 {
+			color:orange;
+			font-weight:bold;
+			}
+		#num3 {
+			color:green;
+			font-weight:bold;
+			}
+		</style>
+{% endblock %}
+{% block body %}
+<div class="locaData">
+	<p class="title">All Cases in {{ country }}</p>
+	<p>Total Confrimed Cases : <span id = "num1"> {{ contConfrim }}</span></p>
+	<p>Total Deaths Cases : <span id = "num2"> {{ contDeaths }}</span></p>
+	<p>Total Recovered Cases : <span id = "num3"> {{ contRecover }}</span></p>
+</div>
+{% endblock %}
